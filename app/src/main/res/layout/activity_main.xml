@@ -1,13 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.landicorp.android.weathercore.main.MainActivity">
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_provinces"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+            </android.support.v7.widget.RecyclerView>
+        </FrameLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:background="@color/drawer_item_bg_n"
+            app:headerLayout="@layout/view_drawer_header"
+            app:menu="@menu/menu_navigation_items"
+            app:itemBackground="@drawable/drawer_item_bg"/>
+    </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

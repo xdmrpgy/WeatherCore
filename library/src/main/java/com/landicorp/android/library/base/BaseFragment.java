@@ -13,18 +13,18 @@ public class BaseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogUtil.d(getClass().getSimpleName(),"onCreate");
+        LogUtil.d(getClass().getSimpleName() + "onCreate");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.d(getClass().getSimpleName(),"onResume");
+        LogUtil.d(getClass().getSimpleName() + "onResume");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtil.d(getClass().getSimpleName(),"onDestroy");
+        LogUtil.d(getClass().getSimpleName() + "onDestroy");
     }
 }

@@ -7,15 +7,16 @@ package com.landicorp.android.weathercore.business.weather.model.http.entities;
  * ${date} $Created by panguangyi on 2017/5/26.
  */
 
-public class Province {
+public class Country {
+
     /**
      * id : 1
      * name : 北京
      */
 
-
     private int id;
     private String name;
+    private String weather_id;
 
     public int getId() {
         return id;
@@ -33,8 +34,11 @@ public class Province {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return " id:" + id + " name:" + name;
+    public String getWeather_id() {
+        return weather_id;
+    }
+
+    public void setWeather_id(String weather_id) {
+        this.weather_id = weather_id;
     }
 }

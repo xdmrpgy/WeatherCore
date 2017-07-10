@@ -15,11 +15,17 @@ android {
 
     }
     buildTypes {
+        debug {
+//            buildConfigField("boolean", "LOG_DEBUG", "true")
+        }
         release {
+//            buildConfigField("boolean", "LOG_DEBUG", "false")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+//    publishNonDefault true
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

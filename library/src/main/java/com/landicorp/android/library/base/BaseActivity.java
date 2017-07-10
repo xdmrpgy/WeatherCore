@@ -26,19 +26,19 @@ public class BaseActivity  extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityUtil.addActivity(this);
-        LogUtil.d(getClass().getSimpleName(),"onCreate");
+        LogUtil.d(getClass().getSimpleName() + "onCreate");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LogUtil.d(getClass().getSimpleName(),"onResume");
+        LogUtil.d(getClass().getSimpleName() + "onResume");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogUtil.d(getClass().getSimpleName(),"onDestroy");
+        LogUtil.d(getClass().getSimpleName() + "onDestroy");
         ActivityUtil.removeActivity(this);
     }
 }

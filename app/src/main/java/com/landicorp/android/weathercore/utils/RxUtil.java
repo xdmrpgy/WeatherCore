@@ -2,6 +2,8 @@ package com.landicorp.android.weathercore.utils;
 
 import io.reactivex.Flowable;
 import io.reactivex.FlowableTransformer;
+import io.reactivex.Observable;
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
@@ -24,5 +26,11 @@ public class RxUtil {
                         .observeOn(AndroidSchedulers.mainThread());
             }
         };
+    }
+
+    public static <T> void setSubscribe(Observable<T> observable, Observer<T> observer) {
+        observable.subscribeOn(Schedulers.io())
+                  .observeOn(AndroidSchedulers.mainThread())
+                  .subscribe(observer);
     }
 }

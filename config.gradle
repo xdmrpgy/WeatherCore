@@ -4,6 +4,7 @@ def okHttpVersion = "3.7.0"
 def stethoVersion = "1.5.0"
 def butterKnifeVersion = "8.5.1"
 def daggerVersion = "2.8"
+def glideVersion = "4.0.0-RC0"
 
 project.ext{
     android = [
@@ -21,7 +22,7 @@ project.ext{
             "support-v4"                        : "com.android.support:support-v4:${supportVersion}",
             "appcompat-v7"                      : "com.android.support:appcompat-v7:${supportVersion}",
             "design"                            : "com.android.support:design:${supportVersion}",
-            "recyclerview"                       : "com.android.support:recyclerview-v7:${supportVersion}",
+            "recyclerview"                      : "com.android.support:recyclerview-v7:${supportVersion}",
             "cardview"                          : "com.android.support:cardview-v7:${supportVersion}",
 
             //rx
@@ -30,9 +31,11 @@ project.ext{
 
             //retrofit
             "retrofit"                          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-            "adapter-rxjava"                    : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            "retrofit-converter-gson"           : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            "retrofit-converter-scalars"        : "com.squareup.retrofit2:converter-scalars:${retrofitVersion}",
+            "adapter-rxjava"                    : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
             "okhttp"                            : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
-            "okhttp3-logging-interceptor"        : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            "okhttp3-logging-interceptor"       : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
 
             //dagger
             "dagger"                            : "com.google.dagger:dagger:${daggerVersion}",
@@ -47,7 +50,11 @@ project.ext{
             "butterknife-compiler"              :  "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
 
             //other
-            "logger"                            : "com.orhanobut:logger:1.15"
+            "logger"                            : "com.orhanobut:logger:1.15",
+
+            //glide
+            "glide"                             : "com.github.bumptech.glide:glide:${glideVersion}",
+            "glide-compiler"                    : "com.github.bumptech.glide:compiler:${glideVersion}"
     ]
 
 }
